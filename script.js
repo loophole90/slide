@@ -20,32 +20,35 @@ const img = [
 
 let index = 1;
 function update(){
-        for(let i = 0; i < img.length; i++){
-        if(i !== index){
-            img[i].classList.remove('certificate-slide__image_active');
-            img[i].classList.remove('certificate-slide__image_left');
-            img[i].classList.remove('certificate-slide__image_right');
-            dots[i].classList.remove('button__dot_active');
-            dots[i].classList.remove('button__dot_active');
-            dots[i].classList.remove('button__dot_active');
-        }
+    for(let i = 0; i < img.length; i++){
+    if(i !== index){
+        img[i].classList.remove('certificate-slide__image_active');
+        img[i].classList.remove('certificate-slide__image_left');
+        img[i].classList.remove('certificate-slide__image_right');
+        dots[i].classList.remove('button__dot_active');
+        dots[i].classList.remove('button__dot_active');
+        dots[i].classList.remove('button__dot_active');
+    }
+
+    img[index].classList.remove('certificate-slide__image_right');
+    img[index].classList.remove('certificate-slide__image_left');
+    img[index].classList.remove('certificate-slide__image_right');
+    dots[index].classList.add('button__dot_active');
+
     }
     if(index === 0){
         img[index].classList.add('certificate-slide__image_left' ,'certificate-slide__image_active');
         img[1].classList.add('certificate-slide__image_left');
         img[2].classList.add('certificate-slide__image_left');
-        img[index].classList.remove('certificate-slide__image_right');
-        dots[index].classList.add('button__dot_active');
+
     } else if(index === 2){
         img[index].classList.add('certificate-slide__image_right', 'certificate-slide__image_active');
         img[0].classList.add('certificate-slide__image_right');
         img[1].classList.add('certificate-slide__image_right');
-        dots[index].classList.add('button__dot_active');
+
     } else{
         img[index].classList.add('certificate-slide__image_active');
-        img[index].classList.remove('certificate-slide__image_left');
-        img[index].classList.remove('certificate-slide__image_right');
-        dots[index].classList.add('button__dot_active');
+
     }
 }
 
