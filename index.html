@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>slide</title>
+</head>
+<body>
+    <div class="slide">
+        <p class="slide__title">МОИ СЕРТИФИКАТЫ</p>
+        <div class="slide__row">
+            <div class="certificate-slide">
+                <img src="img/certificates/1.svg" class="certificate-slide__image" id="certificate-slide__one">
+            </div>
+            <div class="certificate-slide">
+                <img src="img/certificates/2.svg" class="certificate-slide__image certificate-slide__image_active " id="certificate-slide__two">
+            </div>
+            <div class="certificate-slide">
+                <img src="img/certificates/3.svg" class="certificate-slide__image" id="certificate-slide__three">
+            </div>
+        </div>
+        <div class="button">
+
+            <button class="button__b" id="button__prev" onclick="prev()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+
+            <div class="button__dots">
+                <div class="button__dot" id="button__dot_one" onclick="index = 0; update()"></div>
+                <div class="button__dot button__dot_active" id="button__dot_two" onclick="index = 1; update()"></div>
+                <div class="button__dot" id="button__dot_three" onclick="index = 2; update()"></div>
+            </div>
+
+
+            <button class="button__b" id="button__next" onclick="next()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+
+            
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
